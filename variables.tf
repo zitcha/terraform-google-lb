@@ -41,3 +41,9 @@ variable "ssl_min_tls_version" {
   default     = "TLS_1_2"
   type        = string
 }
+
+variable "redirect_http_to_https" {
+  description = "A boolean which makes the HTTP proxy redirect to HTTPS"
+  type        = bool
+  default     = false
+}
