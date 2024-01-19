@@ -55,7 +55,7 @@ resource "google_compute_global_address" "ip" {
 resource "google_compute_url_map" "http_to_https_redirect" {
   count = local.redirect_http_to_https ? 1 : 0
 
-  name = "http-redirect"
+  name = "${var.name}-http-redirect"
 
   default_url_redirect {
     redirect_response_code = "MOVED_PERMANENTLY_DEFAULT"
