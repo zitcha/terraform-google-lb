@@ -1,3 +1,7 @@
+Version 0.4.1 (2024-01-25)
+--------------------------
+google_compute_url_map needs a unique name per module instance (#9)
+
 Version 0.4.0 (2023-12-18)
 --------------------------
 Add ability to automatically redirect HTTP to HTTPS (#6)
