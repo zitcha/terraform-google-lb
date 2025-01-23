@@ -2,6 +2,8 @@
 
 # terraform-google-lb
 
+This is a fork of the repository located [here](https://github.com/snowplow-devops/terraform-google-lb). This was done for Zitcha's purposes, specifically to allow the attachment of [Cloud Armor security policies](https://cloud.google.com/armor/docs/security-policy-overview).
+
 A Terraform module for deploying the parts required to load balance traffic into a GCP instance group.  Both HTTP(80) and HTTPS(443) proxies are deployed - the later optionally only if the required SSL certificate is provided.  For TLS traffic we are defaulting to TLS 1.2.
 
 ## Usage

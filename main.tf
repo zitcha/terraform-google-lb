@@ -9,6 +9,7 @@ resource "google_compute_backend_service" "lb_backend" {
   protocol         = "HTTP"
   timeout_sec      = 60
   session_affinity = "NONE"
+  security_policy  = var.security_policy_id
 
   backend {
     group = var.instance_group_url

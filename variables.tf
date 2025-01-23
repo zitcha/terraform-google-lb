@@ -47,3 +47,9 @@ variable "redirect_http_to_https" {
   type        = bool
   default     = false
 }
+
+variable "security_policy_id" {
+  description = "The Cloud Armor security policy to use for the backend service"
+  type        = string
+  default = "" 
+}
