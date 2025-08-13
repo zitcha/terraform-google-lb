@@ -51,5 +51,16 @@ variable "redirect_http_to_https" {
 variable "security_policy_id" {
   description = "The Cloud Armor security policy to use for the backend service"
   type        = string
-  default = "" 
+  default     = ""
+}
+
+variable "logging_sample_rate" {
+  description = "The sample rate for load balancer logging. Must be between 0.0 and 1.0"
+  type        = number
+  default     = 1.0
+
+  validation {
+    condition     = var.logging_sample_rate >= 0.0 && var.logging_sample_rate <= 1.0
+    error_message = "The logging sample rate must be between 0.0 and 1.0."
+  }
 }
