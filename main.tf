@@ -16,6 +16,11 @@ resource "google_compute_backend_service" "lb_backend" {
   }
 
   health_checks = [var.health_check_self_link]
+
+  log_config {
+    enable      = true
+    sample_rate = var.logging_sample_rate
+  }
 }
 
 resource "google_compute_url_map" "lb_url_map" {
